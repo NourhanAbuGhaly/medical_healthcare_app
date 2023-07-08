@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -49,11 +50,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
-                  obscureText: passTogle ? true : false,
                   decoration: InputDecoration(
                       labelText: "Phone Number",
                       border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.email)),
+                      prefixIcon: Icon(Icons.phone)),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                child: TextField(
+                  obscureText: passTogle ? true : false,
+                  decoration: InputDecoration(
+                      labelText: " Email PassWord",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.person),
+                      suffixIcon: InkWell(
+                        onTap: () {
+                          if (passTogle == true) {
+                            passTogle = false;
+                          } else {
+                            passTogle = true;
+                          }
+                          setState(() {});
+                        },
+                        child: passTogle
+                            ? Icon(CupertinoIcons.eye_slash_fill)
+                            : Icon(CupertinoIcons.eye_fill),
+                      )),
                 ),
               ),
             ],
