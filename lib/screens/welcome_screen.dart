@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_healthcare_app/screens/login_screen.dart';
+import 'package:medical_healthcare_app/screens/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -84,13 +85,13 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),      Material(
+                ), Material(
                   color: Color(0xFF7165D6),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
-                  //    Navigator.push(
-                     //     context, MaterialPageRoute(builder: (context) =>LoginScreen()));
+                          Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>SignUpScreen()));
                     },
                     child: Padding(
                       padding:
