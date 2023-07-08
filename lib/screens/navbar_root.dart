@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medical_healthcare_app/screens/home_screen.dart';
+
 class NavBArRoots extends StatefulWidget {
   const NavBArRoots({super.key});
 
@@ -7,8 +9,47 @@ class NavBArRoots extends StatefulWidget {
 }
 
 class _NavBArRootsState extends State<NavBArRoots> {
+  int _selectedIndex = 0;
+  final _screen = [
+    HomeScreen(),
+    Container(),
+    Container(),
+    Container(),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: _screen[_selectedIndex],
+      bottomNavigationBar: Container(
+        child: BottomNavigationBar(
+          backgroundColor: Colors.white,
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Color(0xFF7165D6),
+          unselectedItemColor: Colors.black26,
+          selectedLabelStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
+          ),
+          currentIndex: _selectedIndex,
+          onTap: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled), label: "Home"),
+          ],
+        ),
+      ),
+    );
   }
 }
