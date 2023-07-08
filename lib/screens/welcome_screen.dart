@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_healthcare_app/screens/login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -7,11 +8,11 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         child: SingleChildScrollView(
-          child: Container(
-      width: MediaQuery.of(context).size.width,
-    //  height: MediaQuery.of(context).size.height,
-      padding: EdgeInsets.all(10),
-      child: Column(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        //  height: MediaQuery.of(context).size.height,
+        padding: EdgeInsets.all(10),
+        child: Column(
           children: [
             SizedBox(
               height: 15,
@@ -68,20 +69,47 @@ class WelcomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
-                      // Navigator.push(
-                      //     context, MaterialPageRoute(builder: (context) =>))
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>LoginScreen()));
                     },
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
-                      child: Text("Log IN", style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                      child: Text(
+                        "Log IN",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ),      Material(
+                  color: Color(0xFF7165D6),
+                  borderRadius: BorderRadius.circular(10),
+                  child: InkWell(
+                    onTap: () {
+                  //    Navigator.push(
+                     //     context, MaterialPageRoute(builder: (context) =>LoginScreen()));
+                    },
+                    child: Padding(
+                      padding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                      child: Text(
+                        "Sign Up",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 )
               ],
             )
           ],
+        ),
       ),
-    ),
-        ));
+    ));
   }
 }
