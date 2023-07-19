@@ -184,7 +184,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 blurRadius: 4,
                                 spreadRadius: 2)
                           ]),
-                      child: Center(child: Text(symptoms[index], style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: Colors.black54),),),
+                      child: Center(
+                        child: Text(
+                          symptoms[index],
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54),
+                        ),
+                      ),
                     );
                   }),
             )
