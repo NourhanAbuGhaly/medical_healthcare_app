@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_healthcare_app/screens/login_screen.dart';
-import 'package:medical_healthcare_app/screens/navbar_root.dart';
+import 'package:medical_healthcare_app/widgets/navbar_root.dart';
 import 'package:medical_healthcare_app/screens/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {

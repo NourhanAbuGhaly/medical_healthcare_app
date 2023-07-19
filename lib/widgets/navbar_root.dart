@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_healthcare_app/screens/home_screen.dart';
 
@@ -42,11 +43,11 @@ class _NavBArRootsState extends State<NavBArRoots> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: "Home"),
+                icon: Icon(CupertinoIcons.chat_bubble_text_fill), label: "Messages"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: "Home"),
+                icon: Icon(Icons.calendar_month), label: "Scheduler"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: "Home"),
+                icon: Icon(Icons.settings), label: "Settings"),
           ],
         ),
       ),
