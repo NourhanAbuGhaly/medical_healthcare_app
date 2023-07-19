@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_healthcare_app/screens/login_screen.dart';
+import 'package:medical_healthcare_app/screens/navbar_root.dart';
 import 'package:medical_healthcare_app/screens/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -22,8 +23,8 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context, MaterialPageRoute(builder: (context) =>))
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => NavBArRoots()));
                 },
                 child: Text(
                   "skip".toLowerCase(),
