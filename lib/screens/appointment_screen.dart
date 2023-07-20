@@ -165,8 +165,95 @@ class AppointmentScreen extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
-                      )
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "124",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            color: Color(0xFF7165D6)),
+                      ),
+                      Spacer(),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "See all",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Color(0xFF7165D6),
+                            ),
+                          ))
                     ],
+                  ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 4,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.all(10),
+                            padding: EdgeInsets.symmetric(vertical: 5),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 4,
+                                      spreadRadius: 2)
+                                ]),
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width / 1.4,
+                              child: Column(
+                                children: [
+                                  ListTile(
+                                    leading: CircleAvatar(
+                                      radius: 25,
+                                      backgroundImage: AssetImage(
+                                        "images/${imge[index]}",
+                                      ),
+                                    ),
+                                    title: Text(
+                                      "Dr. Doctor Name",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text(" 1 day ago "),
+                                    trailing: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        ),
+                                        Text(
+                                          "4.9",
+                                          style: TextStyle(color: Colors.black),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 10),
+                                    child: Text(
+                                        "Many thanks to Dr. Dear . he is a great and professional doctor ", style: TextStyle(color: Colors.black),maxLines: 2,overflow: TextOverflow.ellipsis,),
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
                   ),
                 ],
               ),
