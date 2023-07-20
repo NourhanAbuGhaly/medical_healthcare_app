@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_healthcare_app/screens/appointment_screen.dart';
 import 'package:medical_healthcare_app/screens/home_screen.dart';
 import 'package:medical_healthcare_app/screens/welcome_screen.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home: AppointmentScreen(),
     );
   }
 }

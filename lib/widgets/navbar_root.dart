@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_healthcare_app/screens/home_screen.dart';
+import 'package:medical_healthcare_app/screens/setting_screen.dart';
 
 class NavBArRoots extends StatefulWidget {
   const NavBArRoots({super.key});
@@ -15,7 +16,7 @@ class _NavBArRootsState extends State<NavBArRoots> {
     HomeScreen(),
     Container(),
     Container(),
-    Container(),
+    SettingScreen(),
   ];
 
   @override
