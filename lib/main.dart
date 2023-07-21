@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medical_healthcare_app/screens/appointment_screen.dart';
-import 'package:medical_healthcare_app/screens/home_screen.dart';
 import 'package:medical_healthcare_app/screens/welcome_screen.dart';
 
 void main() {
