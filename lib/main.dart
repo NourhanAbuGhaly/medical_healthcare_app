@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_healthcare_app/screens/message_screen.dart';
-import 'package:medical_healthcare_app/screens/schedule_screen.dart';
+import 'package:medical_healthcare_app/screens/chat_message.dart';
 import 'package:medical_healthcare_app/screens/welcome_screen.dart';
 
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home: ChatMessage(),
     );
   }
 }
