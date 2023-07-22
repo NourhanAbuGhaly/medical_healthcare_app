@@ -31,7 +31,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   "Schedule",
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 32),
